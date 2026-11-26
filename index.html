@@ -24,6 +24,7 @@ header{position:sticky;top:0;z-index:10;background:var(--header);backdrop-filter
 .bar{max-width:1120px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:.5em;padding-left:.61em;font:600 18.75px/1 "Bodoni Moda",Didot,"Bodoni 72",serif;font-variation-settings:"opsz" 18;letter-spacing:.16em;color:var(--ink);text-decoration:none}
 .brand img{height:1.6em;width:1.6em;display:block}
+.bar .short{display:none}
 .bar nav{display:flex;gap:22px;font-size:14px;color:var(--muted)}
 .bar nav a{text-decoration:none}.bar nav a:hover{color:var(--ink)}
 .right{display:flex;align-items:center;gap:10px}
@@ -80,7 +81,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 :root[data-theme=dark] figure.sch svg{filter:invert(.88) hue-rotate(180deg) saturate(1.3)}:root[data-theme=dark] .t-sun{display:block}:root[data-theme=dark] .t-moon{display:none}
 @media (max-width:900px){.c3{grid-template-columns:repeat(2,1fr)}h1{font-size:44px}}
 @media (max-width:760px){
-  .bar{padding:10px 16px}.bar nav{display:none}.brand{font-size:16.25px}
+  .bar{padding:10px 16px}.bar nav{display:none}.brand{font-size:16.25px}.bar .long{display:none}.bar .short{display:inline}
   .wrap{padding:0 16px}
   section{padding:52px 0}.hero{padding:56px 0 48px}
   h1{font-size:34px}h2{font-size:26px}.lead{font-size:17px}.intro{font-size:16px}
@@ -96,12 +97,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <a class="skip" href="#main">Skip to content</a>
 <header><div class="bar"><a class="brand" href="#top" aria-label="MAESTRO home"><img src="assets/maestro-mark.svg" alt="" width="30" height="30">MAESTRO</a>
 <nav aria-label="Sections"><a href="#orchestration">Orchestration</a><a href="#how">Plan structure</a><a href="#graph">Design methods</a><a href="#integrity">Integrity</a><a href="#contact">Contact</a></nav>
-<div class="right"><button class="toggle" id="theme" type="button" aria-label="Switch to dark mode"><svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg><svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><a class="btn primary small" href="#contact">Request early access</a></div></div></header>
+<div class="right"><button class="toggle" id="theme" type="button" aria-label="Switch to dark mode"><svg class="t-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg><svg class="t-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><a class="btn primary small" href="#contact"><span class="long">Request early access</span><span class="short">Early access</span></a></div></div></header>
 <main id="main">
 <section class="hero" id="top"><div class="wrap">
 <p class="eyebrow">Research preview</p>
 <h1>Meta-orchestrator for agents</h1>
-<p class="lead">Multi-agent workflows multiply token use, fail to coordinate, propagate errors and claim unverified completion. On sequential tasks, a single agent can even outperform them. The number of agents and how they connect must therefore be chosen for each task, and each step's output must be checked before the next step uses it.</p>
+<p class="lead">Multi-agent workflows multiply token use, fail to coordinate, propagate errors and claim unverified completion. On sequential tasks, a single agent can even outperform them. Workflow structure must therefore be designed per task, and every step checked.</p>
 <p class="lead">MAESTRO does both. It converts a research request into a plan of steps, agents and checks, and estimates a single-agent plan at equal budget alongside it. It executes the plan within a budget set in advance and checks each step's output in code. A result is accepted only when those checks pass on the tool outputs it cites. Irreversible steps require approval and run at most once, including after a crash.</p>
 <div class="btns"><a class="btn primary" href="#contact">Request early access</a><a class="btn" href="#contact">Propose a collaboration</a></div>
 <p class="small-print">Model-agnostic: closed or open-weight models, through a subscription or your own API key.</p>
