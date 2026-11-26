@@ -101,8 +101,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="hero" id="top"><div class="wrap">
 <p class="eyebrow">Research preview</p>
 <h1>Meta-orchestrator for agents</h1>
-<p class="lead">Multi-agent workflows multiply token use, fail to coordinate, propagate errors and claim unverified completion. On sequential tasks, a single agent can even outperform them. The structure of a workflow therefore has to be designed and evaluated, not assumed.</p>
-<p class="lead">MAESTRO designs that structure. It converts a research request into a plan of steps, agents and checks, and estimates a single-agent plan at equal budget alongside it. It executes the plan within a budget set in advance, checks each step's output in code, and accepts a result only when those checks pass on the tool outputs it cites. Irreversible steps require approval and run at most once, including after a crash.</p>
+<p class="lead">Multi-agent workflows multiply token use, fail to coordinate, propagate errors and claim unverified completion. On sequential tasks, a single agent can even outperform them. The number of agents and how they connect must therefore be chosen for each task, and each step's output must be checked before the next step uses it.</p>
+<p class="lead">MAESTRO does both. It converts a research request into a plan of steps, agents and checks, and estimates a single-agent plan at equal budget alongside it. It executes the plan within a budget set in advance and checks each step's output in code. A result is accepted only when those checks pass on the tool outputs it cites. Irreversible steps require approval and run at most once, including after a crash.</p>
 <div class="btns"><a class="btn primary" href="#contact">Request early access</a><a class="btn" href="#contact">Propose a collaboration</a></div>
 <p class="small-print">Model-agnostic: closed or open-weight models, through a subscription or your own API key.</p>
 </div></section>
